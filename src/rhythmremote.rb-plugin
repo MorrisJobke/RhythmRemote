@@ -1,9 +1,13 @@
 [RB Plugin]
-loader=python
+Loader=python
 Module=rhythmremote
 IAge=1
 Name=RhythmRemote
-Description=Remote control plugins
+Name[de]=RhythmRemote
+Name[en_GB]=RhythmRemote
+Description=Remote control plugin
+Description[de]=Fernsteuerungs-Plugin
+Description[en_GB]=Remote control plugin
 Authors=Morris Jobke <morris.jobke@gmail.com>
 Copyright=Copyright © 2010 Morris Jobke
 Website=http://www.github.com/kabum/RhythmRemote
