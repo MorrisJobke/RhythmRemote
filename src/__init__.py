@@ -15,3 +15,17 @@
 # 
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import BaseHTTPServer
+
+import rb
+
+class RhythmRemotePlugin(rb.Plugin):
+	def __init__(self):
+		rb.Plugin.__init__(self)
+
+	def activate(self, shell):
+		print "Hello World"
+
+	def deactivate(self, shell):
+		pass
