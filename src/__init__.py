@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import BaseHTTPServer
+from RhythmRemoteWebServer import RhythmRemoteWebServer
 
 import rb
 
@@ -26,6 +26,10 @@ class RhythmRemotePlugin(rb.Plugin):
 
 	def activate(self, shell):
 		print "Hello World"
+		self.server = RhythmRemoteWebServer()
 
 	def deactivate(self, shell):
 		pass
+		
+if __name__ == "__main__":
+	server = RhythmRemoteWebServer()

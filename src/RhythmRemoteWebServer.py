@@ -26,11 +26,11 @@ class TestingConfig(Config):
 class RhythmRemoteWebServer(object):
 	def __init__(self):
 		self.app = flask.Flask(__name__)
-		self.app.config.from_object(DevelopmentConfig)
+		self.app.config.from_object(ProductionConfig)
 		self.routes = Routes(self)
 		self.loadRoutes()
 		self.app.before_request(self.force_login)
-		self.app.run()
+		self.app.run(use_reloader=False)
 	
 	def loadRoutes(self):
 		self.app.add_url_rule('/', 'index', self.routes.index)
